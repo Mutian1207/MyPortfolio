@@ -1,8 +1,8 @@
 image: ubuntu:latest
 before_script:
   - apt update
-  - apt install snapd
-  - snap install hugo
+
+  - apt install hugo
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
