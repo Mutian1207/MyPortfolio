@@ -1,0 +1,13 @@
+image: alpine:latest
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - apk add --no-cache hugo
+    - chmod +x publish.sh
+    - ./publish.sh
+  only:
+    - master

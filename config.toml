@@ -6,8 +6,8 @@ disableKinds = ["taxonomy"]
     writeStats = true
 
 [params]
-    title = "Sada Theme"
-    author = "Darshan Baral"
+    title = "Mutian-Ling"
+    author = "Mutian Ling"
     description = "Aboutme"
     copyright = "Custom copyright message"
     theme = "dark" # `dark` or `light`
