@@ -2,7 +2,8 @@ image: ubuntu:latest
 before_script:
   - apt update
 
-  - apt install hugo
+  - apt install -y hugo
+  - apt upgrade hugo
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
