@@ -61,6 +61,7 @@ deploy-job:      # This job runs in the deploy stage.
     - chmod +x publish.sh  # 添加执行权限
     - hugo
     - aws s3 sync public/ s3://mutian-ling.net --acl public-read
+    - aws s3 website s3://mutian-ling.net --index-document index.html --error-document 404.html
     - echo "Application successfully deployed."
   only:
     - main
