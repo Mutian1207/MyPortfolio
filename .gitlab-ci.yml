@@ -1,9 +1,10 @@
 image: ubuntu:latest
 before_script:
   - apt update
-
+  - apt install -y npm
   - apt install -y hugo
   - apt upgrade -y hugo
+  - npm install postcss-cli
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
