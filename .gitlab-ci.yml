@@ -2,8 +2,9 @@ image: ubuntu:latest
 before_script:
   - apt update
   - apt install -y wget
-  - npm install postcss-cli
   - apt install -y nodejs npm
+  - npm install postcss-cli
+  
   - npm install -g n
   - n stable  # 或者 n <version>，根据 Hugo 的要求选择合适的 Node.js 版本
   - wget https://github.com/gohugoio/hugo/releases/download/v0.123.7/hugo_extended_0.123.7_Linux-64bit.tar.gz
