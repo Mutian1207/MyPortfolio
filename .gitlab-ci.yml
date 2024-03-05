@@ -1,10 +1,11 @@
 image: ubuntu:latest
 before_script:
   - apt update
-  - apt install -y npm
   - apt install -y wget
   - npm install postcss-cli
-  - npm update
+  - apt install -y nodejs npm
+  - npm install -g n
+  - n stable  # 或者 n <version>，根据 Hugo 的要求选择合适的 Node.js 版本
   - wget https://github.com/gohugoio/hugo/releases/download/v0.123.7/hugo_extended_0.123.7_Linux-64bit.tar.gz
   # Extract Hugo binary
   - tar -zxvf hugo_extended_0.123.7_Linux-64bit.tar.gz
@@ -16,7 +17,7 @@ before_script:
   - apt install -y python3 python3-pip
   - pip3 install awscli
   - aws --version 
-  
+
   - apt install -y golang
   - go version
 stages:          # List of stages for jobs, and their order of execution
@@ -51,7 +52,8 @@ deploy-job:      # This job runs in the deploy stage.
   script:
     - echo "Deploying application..."
     - chmod +x publish.sh  # 添加执行权限
-    - ./publish.sh
+    - hugo
+    - aws s3 sync public/ s3://mutian-ling.net --acl public-read
     - echo "Application successfully deployed."
   only:
     - main
