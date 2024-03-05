@@ -1,0 +1,142 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+disableKinds = ["taxonomy"]
+
+[build]
+    writeStats = true
+
+[params]
+    title = "Sada Theme"
+    author = "Darshan Baral"
+    description = "Aboutme"
+    copyright = "Custom copyright message"
+    theme = "dark" # `dark` or `light`
+
+    # Profile section
+    [params.profile]
+        name = "Mutian Ling"
+        title = "Master Student @Duke"
+        photo = "images/Mutian.jpeg"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+        icon = "fab fa-linkedin-in"
+        url = "https://linkedin.com/in/mutian-ling"
+        title = "LinkedIn"
+
+        [[params.social.list]]
+        icon = "fab fa-github"
+        url = "https://github.com/Mutian1207"
+        title = "GitHub"
+		
+		[[params.social.list]]
+        icon = "fas fa-envelope"
+        url = "mailto:ml646@duke.edu"
+        title = "Email"
+		
+			
+
+    # Education section
+    [params.education]
+        title = "Education"
+
+        [[params.education.list]]
+        degree = "Masters in Computer Engineering"
+        college = "Duke University"
+        dates = "2022 - 2024"
+    
+
+
+        [[params.education.list]]
+        degree = "Bachelors in Financial Mathematics"
+        college = "Soochow University"
+        dates = "2018 - 2022"
+
+    # Languages section
+    [params.language]
+        title = "Languages"
+
+        [[params.language.list]]
+        language = "English"
+        level = "Fluent"
+				
+        [[params.language.list]]
+        language = "Mandarin"
+        level = "Native"
+
+    # Interests section
+    [params.hobbies]
+        title = "Hobbies"
+
+        [[params.hobbies.list]]
+        interest = "Travelling"
+		
+		[[params.hobbies.list]]
+        interest = "Basketball"
+
+        [[params.hobbies.list]]
+        interest = "Weights Lifting"
+
+        [[params.hobbies.list]]
+        interest = "Poker"
+
+        [[params.hobbies.list]]
+        interest = "Dota2"
+    [params.aboutme]
+       
+        description = """I am a passionate and driven individual with a keen interest in technology and innovation. 
+Currently pursuing a Master's degree in Software Engineering at Duke University. 
+My areas of expertise include software development, data analysis, and machine learning. 
+I am enthusiastic about solving complex problems and contributing to meaningful projects. """
+
+    # Experiences section
+    [params.experiences]
+        title = "Experiences"
+
+        [[params.jobs.list]]
+        position = "Software Developer Intern"
+        dates = "2021.6 - 2021.9"
+		link = "https://www.valuemap.cn/"
+        company = "Valuemap"
+        details = """
+        Used Python libraries like webdriver、flask、request to extract financial data in different formats 
+        Parsed financial data to json format
+        Developed TextCNN model to classify financial opinion on public affairs with Pytorch
+        Deployed different services to the server using XFTPS and Xshell"""
+      
+    # Projects section
+    [params.projects]
+        title = "Projects"
+
+        [[params.projects.list]]
+        title = "Stock Trading System"
+        url = "#"
+        description = "Developed a lightweight stock trading system in C++ on Linux, supporting a certain number of concurrent requests using a thread pool"
+		
+		[[params.projects.list]]
+        title = " Lightweight HTTP Proxy Server"
+        url = "https://github.com/Mutian1207/ece568_Proxy"
+        description = "Built a Proxy Server in C++ on Linux, implementing basic Get, Post, and Connect func- tionalities. It supported a certain number of client requests and promptly responded, caching effective responses for subsequent requests."
+        [[params.projects.list]]
+            title = "Kaggle Silver Medal - Optiver Stock Volatility Prediction Competition"
+            url = "https://www.kaggle.com/lingmutian"
+            description = "Predicted the volatility of a target stock in the next ten minutes based on provided stock trading data using LightGBM and DNN models."
+    
+    # Skills section
+    [params.skills]
+        title = "Skills"
+
+        [[params.skills.list]]
+        skill = "C/C++, Python, Linux, Mysql, Shell"
+        skillrating = 95 # out of 100
+                
+        [[params.skills.list]]
+        skill = "Mutithreading, AWS, Docker, GDB"
+        skillrating = 90
+		
+        [[params.skills.list]]
+        skill = "Go, Rust, Pytorch"
+        skillrating = 80
