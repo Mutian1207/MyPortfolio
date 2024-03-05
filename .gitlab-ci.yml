@@ -21,6 +21,9 @@ before_script:
 
   - apt install -y golang
   - go version
+
+  - export AWS_ACCESS_KEY_ID=AKIAYEE2JQFDIDITVQUL
+  - export AWS_SECRET_ACCESS_KEY=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
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
