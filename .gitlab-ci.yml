@@ -3,7 +3,7 @@ before_script:
   - apt update
 
   - apt install -y hugo
-  - apt upgrade hugo
+  - apt upgrade -y hugo
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
