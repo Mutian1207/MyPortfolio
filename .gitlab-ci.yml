@@ -2,9 +2,10 @@ image: ubuntu:latest
 before_script:
   - apt update
   - apt install -y npm
-  - apt install -y hugo
-  - apt upgrade -y hugo
+  - apt install -y wget
   - npm install postcss-cli
+  - npm update
+
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
@@ -15,8 +16,13 @@ build-job:       # This job runs in the build stage, which runs first.
   script:
  
     - echo "Compiling the code..."
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.123.7/hugo_extended_0.123.7_Linux-64bit.tar.gz
+    # Extract Hugo binary
+    - tar -zxvf hugo_extended_0.123.7_Linux-64bit.tar.gz
+    # Move Hugo binary to a directory in PATH
+    - mv hugo /usr/local/bin/
+    # Verify Hugo installation
     - hugo version
-    - hugo
     - echo "Compile complete."
 
 # unit-test-job:   # This job runs in the test stage.
