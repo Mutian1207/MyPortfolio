@@ -44,14 +44,14 @@ disableKinds = ["taxonomy"]
         title = "Education"
 
         [[params.education.list]]
-        degree = "Masters in Computer Engineering"
+        degree = "Master in Computer Engineering"
         college = "Duke University"
         dates = "2022 - 2024"
     
 
 
         [[params.education.list]]
-        degree = "Bachelors in Financial Mathematics"
+        degree = "Bachelor in Financial Mathematics"
         college = "Soochow University"
         dates = "2018 - 2022"
 
