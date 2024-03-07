@@ -2,7 +2,7 @@
 
 My website is deployed on AWS S3.
 
-[Check my web here](mutian-ling.net)
+[Check my web here](http://mutian-ling.net)
 
 ![Alt text](image.png)
 
