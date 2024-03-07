@@ -30,3 +30,5 @@ when I make some changes to the website and push to my git repo, a git pipeline 
 
 
 ![Alt text](image-6.png)
+
+![Alt text](image-7.png)
